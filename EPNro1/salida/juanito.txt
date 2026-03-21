@@ -1,0 +1,21 @@
+124632 Juan Lopez jlopez@fi.uba.ar 8
+107798 Pedro Valdéz pvaldez@fi.uba.ar 5
+89022 Juan Simone csimone@fi.uba.ar 7
+77562 Julian Lomba flomba@fi.uba.ar 10
+10023 Gonza Pola jpola@fi.uba.ar 4
+122435 Lucia Fernandez lfernandez@fi.uba.ar 9Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora modi omnis corporis repudiandae, numquam, accusantium blanditiis exercitationem facilis eum veniam quod ducimus animi aut officiis, quaerat voluptatum. Soluta, impedit odit.
+Reiciendis minima voluptates cumque molestiae excepturi harum, consectetur animi a enim magnam vero accusantium inventore omnis. Distinctio voluptatum ducimus repellendus aliquid, odio illo maiores nobis tempore! Quasi ab vero architecto.
+Laudantium accusamus odio incidunt cum, perferendis, placeat excepturi quibusdam, et quos molestias nesciunt necessitatibus commodi sunt molestiae obcaecati ad deleniti! Quas earum soluta reprehenderit. Qui voluptatibus quo nesciunt ducimus numquam.
+Debitis est, odio harum esse nihil quas sit deserunt aliquam fuga ducimus inventore accusamus cupiditate soluta libero quibusdam iste voluptatum voluptas tempore facere vel ex consectetur consequuntur. Fuga, temporibus quos!
+Voluptatibus alias minus fugiat officia voluptate, nesciunt enim odio saepe fuga quibusdam autem placeat dolores suscipit expedita facere, sapiente quidem tenetur itaque neque tempora, consequatur quia quam. Neque, iure optio.
+Quos explicabo inventore deserunt dolorem aut, aliquid provident voluptates molestiae accusamus cumque. Saepe eum iusto, dolorum in culpa ex laudantium accusamus, neque, incidunt quaerat voluptas nisi! Rem facilis pariatur numquam.
+Voluptate quam ut tempora quae! Eaque corrupti facere accusantium laborum, neque distinctio ipsam necessitatibus illo facilis consectetur voluptatibus, aliquid unde tempore debitis esse error! Voluptas, ea. Quo minima neque alias.
+Veniam rem amet iusto necessitatibus iste earum reprehenderit odio natus accusantium perspiciatis quia voluptates soluta facilis, cum totam quam odit aut aliquam omnis corporis molestias? Voluptatem nihil distinctio ipsum ab?
+Obcaecati rem iste iure odit, deleniti, laudantium amet veniam nihil aperiam itaque minus impedit consectetur harum expedita praesentium dignissimos non aliquid et! Et in veniam nobis enim a nemo aspernatur!
+Ratione quas labore nostrum, architecto iure velit minus consectetur, molestiae cumque quam veniam ipsa dolorem illum natus? Tempora natus reprehenderit doloremque modi impedit minima repudiandae. Praesentium tempora natus deserunt optio?122332,Juan Lopez,jlopez@fi.uba.ar,8
+100998,Pedro Valdéz,pvaldez@fi.uba.ar,5
+89032,Carla Simone,csimone@fi.uba.ar,7
+77542,Franco Lomba,flomba@fi.uba.ar,10
+100223,Juana Pola,jpola@fi.uba.ar,4
+122435,Lucia Fernandez,lfernandez@fi.uba.ar,9
+123563,Manuel Solaris,lmanuel@fi.uba.ar,5

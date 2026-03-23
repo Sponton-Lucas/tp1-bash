@@ -3,5 +3,6 @@
 for i in $(ls entrada);
 do 
     cat entrada/$i >> salida/$FILENAME.txt;
+    echo " " >> salida/$FILENAME.txt;
     mv entrada/$i procesado/;
 done

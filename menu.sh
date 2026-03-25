@@ -7,15 +7,14 @@ if [ "$parametro" == "-d" ]; then
 fi
 
 echo ""
-echo "Ingrese el nombre del archivo que tendra el resultado de las operaciones:";
-read input;
-
+echo "Ingrese el nombre del archivo que tendra el resultado de las operaciones:"
+read input
 
 export FILENAME=$input
 
-verdadero=1;
+verdadero=1
 while [ $verdadero -eq 1 ]
-    do
+do
     echo ""
     echo "----- Menu -----"
     echo "Elija una opción:"
@@ -29,92 +28,83 @@ while [ $verdadero -eq 1 ]
 
     read opcion
     case $opcion in
-    
         1)
-         mkdir  /home/EPNro1  
-         cp consolidar.sh /home/EPNro1/
-    	 mkdir /home/EPNro1/entrada /home/EPNro1/salida /home/EPNro1/procesado
-     	 cp *.txt  /home/EPNro1/entrada/
-		 ;;
+            mkdir /home/EPNro1
+            cp consolidar.sh /home/EPNro1/
+            mkdir /home/EPNro1/entrada /home/EPNro1/salida /home/EPNro1/procesado
+            cp *.txt /home/EPNro1/entrada/
+            ;;
 
         2)
-         if [ -d /home/EPNro1 ]; then 
-        	 cd /home/EPNro1/
-           	 bash consolidar.sh &           
-     	 else 
-     	 echo ""
-     	 echo "Debes crear el entorno con la opcion 1 para correr el proceso."
-      	 fi
-      	 ;;
-		
-        3)	
-       	 echo ""
-         if [ -d /home/EPNro1 ]; then
-      		   
-          	 if [ -f /home/EPNro1/salida/$FILENAME.txt ]; then
-          		 echo "-Padrones ordenados: "
-              	 sort -n /home/EPNro1/salida/$FILENAME.txt 
-      		 else
-             	 echo "No existe ningun archivo en la carpeta salida procure haber usado la opción 2."
-         	 fi 
-            
-   		 else
-        	 echo "Debes crear el entorno con la opcion 1 para usar esta opción."
-       	 fi
-      	 ;;
-        
+            if [ -d /home/EPNro1 ]; then
+                cd /home/EPNro1/
+                bash consolidar.sh &
+            else
+                echo ""
+                echo "Debes crear el entorno con la opcion 1 para correr el proceso."
+            fi
+            ;;
+
+        3)
+            echo ""
+            if [ -d /home/EPNro1 ]; then
+                if [ -f /home/EPNro1/salida/$FILENAME.txt ]; then
+                    echo "-Padrones ordenados: "
+                    sort -n /home/EPNro1/salida/$FILENAME.txt
+                else
+                    echo "No existe ningun archivo en la carpeta salida procure haber usado la opción 2."
+                fi
+            else
+                echo "Debes crear el entorno con la opcion 1 para usar esta opción."
+            fi
+            ;;
+
         4)
-       	 echo ""
-         if [ -d /home/EPNro1 ]; then
-                
-       		 if [ -f /home/EPNro1/salida/$FILENAME.txt ]; then
-            	 echo "Alumnos con las 10 notas mas altas: "
-              	 sort -nrk 5 /home/EPNro1/salida/$FILENAME.txt | head
-         	 else
-             	 echo "No existe ningun archivo en la carpeta salida procure haber usado la opción 2."
-         	 fi
-         	 
-     	 else 
-          	echo "Debes crear el entorno con la opcion 1 para usar esta opción."
-       	 fi
-       	 ;;
-        
+            echo ""
+            if [ -d /home/EPNro1 ]; then
+                if [ -f /home/EPNro1/salida/$FILENAME.txt ]; then
+                    echo "Alumnos con las 10 notas mas altas: "
+                    sort -nrk 5 /home/EPNro1/salida/$FILENAME.txt | head
+                else
+                    echo "No existe ningun archivo en la carpeta salida procure haber usado la opción 2."
+                fi
+            else
+                echo "Debes crear el entorno con la opcion 1 para usar esta opción."
+            fi
+            ;;
+
         5)
-       	 echo ""
-         if [ -f /home/EPNro1/salida/$FILENAME.txt  ]; then
-       		 echo "Ingrese un Nro de Padrón: "
-       		 
-           	 read padron
-          	 patron='^[0-9]+$'
+            echo ""
+            if [[ -d /home/EPNro1 && -f /home/EPNro1/salida/$FILENAME.txt ]]; then
+                echo "Ingrese un Nro de Padrón: "
+                read padron
+                patron='^[0-9]+$'
 
-          	 echo ""
-          	 if  [[ $padron =~ $patron ]]; then
-           			 resultado_busqueda=$(grep -w "$padron" /home/EPNro1/salida/$FILENAME.txt)   
+                echo ""
+                if [[ $padron =~ $patron ]]; then
+                    resultado_busqueda=$(grep -w "$padron" /home/EPNro1/salida/$FILENAME.txt)
 
-           			 if [ -n "$resultado_busqueda" ]; then
-           			 	echo "El alumno con el padron ingresado es:"
-           			 	echo "$resultado_busqueda"
-           			 else
-           			 	echo "El padron ingresado no coincide con el de ningun alumno registrado" 
-           			 fi
-           			 
-           	 else 
-            	 echo "El padrón ingresado no es válido."
-          	 fi
-                
-    	else
-         	 echo "Debes crear el entorno con la opcion 1 y correr el proceso con la opción 2 para usar esta opción."
-   		 fi 
-     	 ;;
-            
+                    if [ -n "$resultado_busqueda" ]; then
+                        echo "El alumno con el padron ingresado es:"
+                        echo "$resultado_busqueda"
+                    else
+                        echo "El padron ingresado no coincide con el de ningun alumno registrado"
+                    fi
+                else
+                    echo "El padrón ingresado no es válido."
+                fi
+            else
+                echo "Debes crear el entorno con la opcion 1 y correr el proceso con la opción 2 para usar esta opción."
+            fi
+            ;;
+
         6)
-         verdadero=2
-       	 ;;
+            verdadero=2
+            ;;
 
-      	*)
-      	 echo ""
-      	 echo "Opcion desconocida, ingrese correctamente alguna de las 6 opciones del menu"
-      	 ;;
-       	 
-	 esac
+        *)
+            echo ""
+            echo "Opcion desconocida, ingrese correctamente alguna de las 6 opciones del menu"
+            ;;
+    esac
 done

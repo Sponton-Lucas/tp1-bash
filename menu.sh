@@ -40,7 +40,7 @@ while [ $verdadero -eq 1 ]
         2)
          if [ -d /home/EPNro1 ]; then 
         	 cd /home/EPNro1/
-           	 sh consolidar.sh &           
+           	 bash consolidar.sh &           
      	 else 
      	 echo ""
      	 echo "Debes crear el entorno con la opcion 1 para correr el proceso."
